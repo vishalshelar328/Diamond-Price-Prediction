@@ -15,15 +15,15 @@ class CustomData:
                  cut='Fair',
                  color='D',
                  clarity='I1'):
-        self.carat = carat
-        self.depth = depth
-        self.table = table
-        self.x = x
-        self.y = y
-        self.z = z
-        self.cut = cut
-        self.color = color
-        self.clarity = clarity
+                 self.carat = carat
+                 self.depth = depth
+                 self.table = table
+                 self.x = x
+                 self.y = y
+                 self.z = z
+                 self.cut = cut
+                 self.color = color
+                 self.clarity = clarity
 
     def get_data(self):
         return {
