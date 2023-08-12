@@ -2,6 +2,8 @@ import streamlit as st
 from src.pipelines.prediction_pipeline import CustomData, PredictPipeline
 from src.exception import CustomException
 
+import pandas as pd
+
 def main():
     st.title('Diamond Prediction App')
 
