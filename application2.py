@@ -31,7 +31,7 @@ def main():
                 color=color,
                 clarity=clarity
             )
-            final_new_data = data.get_data_as_dataframe()
+            final_new_data = pd.DataFrame(data.get_data())
             predict_pipeline = PredictPipeline()
             pred = predict_pipeline.predict(final_new_data)
             results = round(pred[0], 2)
