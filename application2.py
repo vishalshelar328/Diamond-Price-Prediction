@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from src.pipelines.prediction_pipeline import CustomData, PredictPipeline
 from src.exception import CustomException
 
