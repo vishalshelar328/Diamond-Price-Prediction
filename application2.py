@@ -38,6 +38,11 @@ class CustomData:
             'clarity': self.clarity
         }
 
+class CustomException(Exception):
+    def __init__(self, error_message, error_detail):
+        super().__init__(error_message)
+        self.error_detail = error_detail
+
 def main():
     st.title('Diamond Prediction App')
 
@@ -76,7 +81,6 @@ def main():
             st.write(f'Predicted Diamond Price: {results}')
         
         except CustomException as e:
-            st.error("An error occurred while processing the prediction.")
             st.error(f"CustomException details: {e.error_detail}")
         
         except Exception as e:
