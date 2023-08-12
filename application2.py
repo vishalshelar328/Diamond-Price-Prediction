@@ -77,7 +77,7 @@ def main():
         
         except CustomException as e:
             st.error("An error occurred while processing the prediction.")
-            st.error(f"CustomException details: {e}")
+            st.error(f"CustomException details: {e.error_detail}")
         
         except Exception as e:
             st.error("An unexpected error occurred.")
