@@ -4,6 +4,40 @@ from src.exception import CustomException
 
 import pandas as pd
 
+class CustomData:
+    def __init__(self,
+                 carat=float(0.5),
+                 depth=float(60),
+                 table=float(55),
+                 x=float(5),
+                 y=float(5),
+                 z=float(5),
+                 cut='Fair',
+                 color='D',
+                 clarity='I1'):
+        self.carat = carat
+        self.depth = depth
+        self.table = table
+        self.x = x
+        self.y = y
+        self.z = z
+        self.cut = cut
+        self.color = color
+        self.clarity = clarity
+
+    def get_data(self):
+        return {
+            'carat': self.carat,
+            'depth': self.depth,
+            'table': self.table,
+            'x': self.x,
+            'y': self.y,
+            'z': self.z,
+            'cut': self.cut,
+            'color': self.color,
+            'clarity': self.clarity
+        }
+
 def main():
     st.title('Diamond Prediction App')
 
